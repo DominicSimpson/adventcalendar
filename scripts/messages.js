@@ -1,4 +1,4 @@
-var messages = [
+let messages = [
 	["There is nothing in the world so irresistibly contagious as laughter and good humor.", "Charles Dickens"],
 	["Christmas, children, is not a date. It is a state of mind.", "Mary Ellen Chase"],
 	["Christmas waves a magic wand over this world, and behold, everything is softer and more beautiful.", "Norman Vincent Peale"],
