@@ -56,8 +56,8 @@ function Door(calendar, day) {  // the object constructor prototype. Prototypes 
             }
         }
     }
-    // }
 }
+
 // };
 
     (function() {
