@@ -2,8 +2,13 @@ console.log("Hello World!");
 
 
 let myCal = document.getElementById("adventCal");
-let currentDate = new Date(2022,11); // gets dates for the month of December in the year 2022 AD
+let currentDate = new Date(2022, 11, 0,24); // gets dates for the month of December in the year 2022 AD
 console.log(currentDate);
+
+// let days = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
+
+let doors = []; // contains the 24 door objects;
+
 
 
 function Door(calendar, day) {  // the object constructor prototype. Prototypes start with a capital letter.
@@ -31,6 +36,13 @@ function Door(calendar, day) {  // the object constructor prototype. Prototypes 
         innerNode.innerHTML = day;
         innerNode.href = "#";
 
+        // const doors = []; 
+        // if (doors.onclick, clickDoor);
+        
+        // function clickDoor() {        
+        //     for (let i = 0; i < currentDate.length; i++) {
+
+        
         if((currentDate.getMonth() + 1) < 12 || currentDate.getDate() < day) { // ensures that a panel of a future date can't be opened
             innerNode.className = "disabled";
             innerNode.onclick = function() {
@@ -40,18 +52,20 @@ function Door(calendar, day) {  // the object constructor prototype. Prototypes 
             let adventMessage = this.adventMessage;
             innerNode.onclick = function() {
                 alert(adventMessage);
-                return false;
+                return true;
             }
         }
     }
-
-    };
+    // }
+}
+// };
 
     (function() {
         
-        const doors = []; // contains the 24 door objects;
-    
+        // let doors = []; // contains the 24 door objects;
+
         for (let i = 0; i < 24; i++) {
+
 
             doors[i] = new Door(myCal, i + 1);
             doors[i].content();
@@ -60,4 +74,4 @@ function Door(calendar, day) {  // the object constructor prototype. Prototypes 
 
         return doors;
 
-    })();
+    })()
